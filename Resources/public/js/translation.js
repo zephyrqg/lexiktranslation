@@ -145,8 +145,8 @@ app.directive('editableRow', ['$http', 'sharedMessage', function ($http, sharedM
                         parameters.push(name+'='+encodeURIComponent($scope.translation[name]));
                     }
 
-                    // force content type to make SF create a Request with the PUT parameters
-                    $http({ 'url': url, 'data': parameters.join('&'), method: 'PUT', headers: {'Content-Type': 'application/x-www-form-urlencoded'} })
+                    // force content type to make SF create a Request with the POST parameters
+                    $http({ 'url': url, 'data': parameters.join('&'), method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'} })
                         .success(function (data, status, headers, config) {
                             $scope.edit = false;
                             $scope.translation = data;

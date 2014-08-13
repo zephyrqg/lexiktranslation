@@ -6,7 +6,7 @@ lexik_translation_list:
 lexik_translation_update:
     pattern:      /translations/{id}
     defaults:     { _controller: "LexikTranslationBundle:Rest:update" }
-    requirements: { _method: PUT }
+    requirements: { _method: POST }
 
 lexik_translation_grid:
     pattern:      /grid

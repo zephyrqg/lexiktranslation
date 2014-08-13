@@ -28,7 +28,7 @@ class RestController extends Controller
     {
         $request = $this->getRequest();
 
-        if (!$request->isMethod('PUT')) {
+        if (!$request->isMethod('POST')) {
             throw $this->createNotFoundException('Invalid request method.');
         }
 
